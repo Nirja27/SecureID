@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureID - Create Account</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="registration-card">
+
+            <!-- HEADER -->
+            <header class="header">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            <svg
+                class="secure-shield"
+                viewBox="0 0 64 72"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M32 2
+                       L59 12
+                       V31
+                       C59 49 48 62 32 70
+                       C16 62 5 49 5 31
+                       V12 Z"
+                    fill="#3038D8"
+                />
+
+                <rect
+                    x="23"
+                    y="32"
+                    width="18"
+                    height="17"
+                    rx="2"
+                    fill="white"
+                />
+
+                <path
+                    d="M27 32 V27
+                       C27 20 37 20 37 27
+                       V32"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                />
+
+                <circle
+                    cx="32"
+                    cy="39"
+                    r="2"
+                    fill="#3038D8"
+                />
+
+                <rect
+                    x="31"
+                    y="39"
+                    width="2"
+                    height="5"
+                    rx="1"
+                    fill="#3038D8"
+                />
+            </svg>
+        </div>
+
+        <span>SecureID</span>
+
+    </div>
+
+</header>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-container">
+
+                <div class="progress-line"></div>
+
+                <div class="step active">
+                    <span>1</span>
+                </div>
+
+                <div class="step active-light">
+                    <span>2</span>
+                </div>
+
+                <div class="step">
+                    <span>3</span>
+                </div>
+
+                <div class="step">
+                    <span>4</span>
+                </div>
+
+                <div class="step">
+                    <span>5</span>
+                </div>
+
+            </div>
+
+
+            <!-- TITLE -->
+            <div class="title-section">
+
+                <h1>Create your account</h1>
+
+                <p>Let's get you started</p>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form id="registrationForm">
+
+                <div class="form-layout">
+
+                    <!-- LEFT SIDE -->
+                    <div class="form-fields">
+
+                        <!-- NAME -->
+                        <div class="form-group">
+
+                            <label for="name">Full Name</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder=" "
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="email">Email</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder=" "
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label for="phone">Mobile Number</label>
+
+                            <div class="phone-input">
+
+                                <select id="countryCode">
+
+                                    <option value="+91">+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+61">+61</option>
+
+                                </select>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    placeholder=" "
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+
+                            <label for="password">Password</label>
+
+                            <div class="password-input">
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder=" "
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    id="togglePassword"
+                                    class="eye-button"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT SIDE -->
+                    <div class="requirements-section">
+
+                        <div class="requirements-box">
+
+                            <h3>Password must contain:</h3>
+
+                            <div class="requirement" id="lengthRequirement">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>At least 8 characters</span>
+                            </div>
+
+                            <div class="requirement" id="uppercaseRequirement">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>1 uppercase letter</span>
+                            </div>
+
+                            <div class="requirement" id="numberRequirement">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>1 number</span>
+                            </div>
+
+                            <div class="requirement" id="specialRequirement">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>1 special character</span>
+                            </div>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+                        <label class="terms">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <span>
+                                I agree to the
+                                <a href="#">Terms & Conditions</a>
+                                <br>
+                                and
+                                <a href="#">Privacy Policy</a>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <p id="message"></p>
+
+
+                <!-- CREATE ACCOUNT -->
+                <button
+                    type="submit"
+                    class="create-account"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- LOGIN -->
+            <div class="login-text">
+
+                Already have an account?
+                <a href="#">Login</a>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer>
+                © 2024 SecureID. All rights reserved.
+            </footer>
+
+            <!-- EMAIL OTP SCREEN -->
+<div id="emailOtpScreen" class="otp-screen">
+
+    <!-- OTP HEADER -->
+    <header class="otp-header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <svg
+                    class="secure-shield"
+                    viewBox="0 0 64 72"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M32 2
+                           L59 12
+                           V31
+                           C59 49 48 62 32 70
+                           C16 62 5 49 5 31
+                           V12 Z"
+                        fill="#3038D8"
+                    />
+
+                    <rect
+                        x="23"
+                        y="32"
+                        width="18"
+                        height="17"
+                        rx="2"
+                        fill="white"
+                    />
+
+                    <path
+                        d="M27 32 V27
+                           C27 20 37 20 37 27
+                           V32"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                    />
+
+                    <circle
+                        cx="32"
+                        cy="39"
+                        r="2"
+                        fill="#3038D8"
+                    />
+
+                    <rect
+                        x="31"
+                        y="39"
+                        width="2"
+                        height="5"
+                        rx="1"
+                        fill="#3038D8"
+                    />
+                </svg>
+            </div>
+
+            <span>SecureID</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- OTP PROGRESS -->
+    <div class="progress-container otp-progress">
+
+        <div class="progress-line"></div>
+
+        <div class="step completed">
+            <span>1</span>
+        </div>
+
+        <div class="step active">
+            <span>2</span>
+        </div>
+
+        <div class="step active-light">
+            <span>3</span>
+        </div>
+
+        <div class="step">
+            <span>4</span>
+        </div>
+
+        <div class="step">
+            <span>5</span>
+        </div>
+
+    </div>
+
+
+    <!-- EMAIL ICON -->
+    <div class="otp-icon">
+        <i class="fa-regular fa-envelope"></i>
+    </div>
+
+
+    <!-- OTP TITLE -->
+    <div class="otp-title">
+
+        <h1>Verify your email</h1>
+
+        <p>
+            We have sent a 6-digit code to
+        </p>
+
+        <strong id="otpEmail">
+            your email
+        </strong>
+
+    </div>
+
+
+    <!-- OTP INPUTS -->
+    <div class="otp-inputs">
+
+        <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            inputmode="numeric"
+        >
+
+        <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            inputmode="numeric"
+        >
+
+        <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            inputmode="numeric"
+        >
+
+        <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            inputmode="numeric"
+        >
+
+        <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            inputmode="numeric"
+        >
+
+        <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            inputmode="numeric"
+        >
+
+    </div>
+
+
+    <!-- OTP MESSAGE -->
+    <p id="otpMessage"></p>
+
+
+    <!-- EXPIRY -->
+    <p class="otp-expiry">
+        Code expires in
+        <strong id="otpTimer">02:45</strong>
+    </p>
+
+
+    <!-- RESEND -->
+    <p class="resend-text">
+    <strong id="resendTimer">(00:25)</strong>
+</p>
+
+
+    <!-- DIDN'T RECEIVE -->
+    <p class="didnt-receive">
+        Didn't receive the code?
+    </p>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2024 SecureID. All rights reserved.
+    </footer>
+
+</div>
+
+ 
+   <!-- SMS OTP Screen -->
+<div id="smsOtpScreen" class="otp-screen">
+
+    <header class="otp-header">
+        <div class="brand">
+            <div class="brand-icon">
+    <svg
+        class="secure-shield"
+        viewBox="0 0 64 72"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M32 2
+               L59 12
+               V31
+               C59 49 48 62 32 70
+               C16 62 5 49 5 31
+               V12 Z"
+            fill="#3038D8"
+        />
+
+        <rect
+            x="23"
+            y="32"
+            width="18"
+            height="17"
+            rx="2"
+            fill="white"
+        />
+
+        <path
+            d="M27 32 V27
+               C27 20 37 20 37 27
+               V32"
+            fill="none"
+            stroke="white"
+            stroke-width="4"
+            stroke-linecap="round"
+        />
+
+        <circle
+            cx="32"
+            cy="39"
+            r="2"
+            fill="#3038D8"
+        />
+
+        <rect
+            x="31"
+            y="39"
+            width="2"
+            height="5"
+            rx="1"
+            fill="#3038D8"
+        />
+    </svg>
+</div>
+            <span>SecureID</span>
+        </div>
+    </header>
+
+    <div class="progress-container otp-progress">
+        <div class="progress-line"></div>
+
+        <div class="step completed">
+            <span>1</span>
+        </div>
+
+        <div class="step completed">
+            <span>2</span>
+        </div>
+
+        <div class="step active">
+            <span>3</span>
+        </div>
+
+        <div class="step active-light">
+            <span>4</span>
+        </div>
+
+        <div class="step">
+            <span>5</span>
+        </div>
+    </div>
+
+    <div class="otp-icon sms-otp-icon">
+    <svg
+        class="sms-phone-icon"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+    d="M22 16.92v3a2 2 0 0 1-2.18 2
+       19.79 19.79 0 0 1-8.63-3.07
+       19.5 19.5 0 0 1-6-6
+       A19.79 19.79 0 0 1 2.12 4.18
+       2 2 0 0 1 4.11 2h3
+       a2 2 0 0 1 2 1.72
+       12.84 12.84 0 0 0 .7 2.81
+       2 2 0 0 1-.45 2.11L8.09 9.91
+       a16 16 0 0 0 6 6l1.27-1.27
+       a2 2 0 0 1 2.11-.45
+       12.84 12.84 0 0 0 2.81.7
+       A2 2 0 0 1 22 16.92z"
+    fill="none"
+    stroke="#35b87b"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>
+    </svg>
+</div>
+
+    <div class="otp-title">
+        <h1>Verify your phone</h1>
+
+        <p>We have sent a 6-digit code to</p>
+
+        <strong id="smsPhone">
+            your phone
+        </strong>
+    </div>
+
+    <div class="otp-inputs">
+        <input type="text" maxlength="1" class="sms-otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="sms-otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="sms-otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="sms-otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="sms-otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="sms-otp-input" inputmode="numeric">
+    </div>
+
+    <p id="smsOtpMessage"></p>
+
+<p
+    id="smsOtpExpired"
+    class="sms-otp-expired-message"
+    style="display: none;"
+></p>
+
+<p
+    id="smsOtpMaxAttempt"
+    class="sms-otp-max-attempt-message"
+    style="display: none;"
+></p>
+
+    <p class="otp-expiry">
+        Code expires in
+        <strong id="smsOtpTimer">02:00</strong>
+    </p>
+
+    <p class="resend-text">
+        Resend code
+        <strong id="smsResendTimer">(00:25)</strong>
+    </p>
+
+    <p class="didnt-receive">
+    Wrong number?
+    <a href="#" id="changePhone">Change</a>
+</p>
+
+    <footer>
+        © 2024 SecureID. All rights reserved.
+    </footer>
+
+</div>   
+     
+
+
+        </div>
+
+
+
+    <!-- =================================
+     MFA COMPLETE SCREEN
+================================== -->
+
+<section
+    class="mfa-complete-card"
+    id="mfaCompleteScreen"
+    style="display: none;"
+>
+    <div class="mfa-complete-icon">
+        <div class="mfa-complete-circle">✓</div>
+    </div>
+
+    <h2>Multi-Factor Authentication Enabled</h2>
+
+    <p class="mfa-complete-message">
+        Your mobile number has been verified successfully.
+    </p>
+
+    <p class="mfa-complete-submessage">
+        Multi-factor authentication has been enabled for your account.
+    </p>
+
+    <button
+        type="button"
+        class="primary-button"
+        id="continueToSuccess"
+    >
+        Continue
+    </button>
+
+    <p class="mfa-complete-copyright">
+        © 2024 SecureID. All rights reserved.
+    </p>
+</section>
+
+<!-- REGISTRATION SUCCESS SCREEN -->
+
+<section
+    class="registration-success-card"
+    id="registrationSuccessScreen"
+    style="display: none;"
+>
+
+    <div class="success-icon">
+        <div class="success-circle">✓</div>
+    </div>
+
+    <h2>Account created!</h2>
+
+    <p class="success-message">
+        Your account has been created<br>
+        successfully and MFA is enabled.
+    </p>
+
+    <div class="verification-list">
+
+        <p>
+            <span>✓</span>
+            Email verified
+        </p>
+
+        <p>
+            <span>✓</span>
+            Mobile verified
+        </p>
+
+        <p>
+            <span>✓</span>
+            MFA enabled
+        </p>
+
+    </div>
+
+    <button
+        type="button"
+        class="primary-button"
+        id="goToLogin"
+    >
+        Continue to Login
+    </button>
+
+</section>
+</div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

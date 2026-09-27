@@ -1,0 +1,1510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fc;
+    color: #111827;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.registration-card {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 28px 18px;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    margin-bottom: 18px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.brand-icon {
+    width: 30px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secure-shield {
+    width: 30px;
+    height: 34px;
+    display: block;
+}
+
+/* ================= PROGRESS ================= */
+
+.progress-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+    margin: 0 auto 27px;
+}
+
+.progress-line {
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    height: 2px;
+    background: #dce3f1;
+    z-index: 0;
+}
+
+.step {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #dce3f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: #687083;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.step.active {
+    background: #263ed8;
+    border-color: #263ed8;
+    color: white;
+}
+
+.step.active-light {
+    background: #f5f7ff;
+    border-color: #c8d1f6;
+    color: #2943d9;
+}
+
+
+/* ================= TITLE ================= */
+
+.title-section {
+    margin-bottom: 18px;
+}
+
+.title-section h1 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.title-section p {
+    color: #697386;
+    font-size: 11px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.72fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 11px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+.form-group input,
+.phone-input input,
+.phone-input select {
+    height: 30px;
+    border: 1px solid #d9dee8;
+    border-radius: 5px;
+    background: white;
+    font-size: 10px;
+    padding: 0 9px;
+    outline: none;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.form-group input:focus,
+.phone-input input:focus,
+.phone-input select:focus {
+    border-color: #3447d7;
+    box-shadow: 0 0 0 2px rgba(52, 71, 215, 0.08);
+}
+
+
+/* ================= PHONE ================= */
+
+.phone-input {
+    display: flex;
+    gap: 6px;
+}
+
+.phone-input select {
+    width: 62px;
+    cursor: pointer;
+}
+
+.phone-input input {
+    flex: 1;
+}
+
+
+/* ================= PASSWORD ================= */
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    width: 100%;
+    padding-right: 32px;
+}
+
+.eye-button {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 11px;
+}
+
+
+/* ================= REQUIREMENTS ================= */
+
+.requirements-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.requirements-box {
+    border: 1px solid #e0e5ed;
+    border-radius: 8px;
+    padding: 13px 13px;
+}
+
+.requirements-box h3 {
+    font-size: 9px;
+    margin-bottom: 11px;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    font-size: 9px;
+    color: #4b5563;
+}
+
+.requirement:last-child {
+    margin-bottom: 0;
+}
+
+.requirement i {
+    color: #35b87b;
+    font-size: 11px;
+}
+
+
+/* ================= TERMS ================= */
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 13px;
+    font-size: 8px;
+    line-height: 1.45;
+    color: #586174;
+    cursor: pointer;
+}
+
+.terms input {
+    margin-top: 2px;
+    width: 11px;
+    height: 11px;
+    accent-color: #243ad9;
+}
+
+.terms a {
+    color: #2544d7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ================= MESSAGE ================= */
+
+#message {
+    text-align: center;
+    font-size: 10px;
+    margin: 7px 0;
+}
+
+
+/* ================= BUTTON ================= */
+
+.create-account {
+    width: 100%;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background: #2440dc;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.create-account:hover {
+    background: #1d35c5;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-text {
+    text-align: center;
+    margin-top: 11px;
+    font-size: 9px;
+    color: #626b7c;
+}
+
+.login-text a {
+    color: #2440dc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    color: #9aa1ad;
+    font-size: 8px;
+    margin-top: 12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    body {
+        background: #ffffff;
+    }
+
+    .page {
+        min-height: 100vh;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .registration-card {
+        width: 100%;
+        max-width: 360px;
+        min-height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 18px 20px 15px;
+        margin: 0 auto;
+    }
+
+
+    /* Mobile back arrow */
+
+    .header {
+        margin-bottom: 17px;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .header::before {
+        content: "←";
+        display: block;
+        font-size: 21px;
+        color: #374151;
+        line-height: 1;
+    }
+
+
+    /* Hide progress on mobile */
+
+    .progress-container {
+        display: none;
+    }
+
+
+    /* Title */
+
+    .title-section {
+        text-align: center;
+        margin-bottom: 19px;
+    }
+
+    .title-section h1 {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .title-section p {
+        font-size: 9px;
+    }
+
+
+    /* Form */
+
+    .form-layout {
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 9px;
+        margin-bottom: 4px;
+    }
+
+    .form-group input,
+    .phone-input input,
+    .phone-input select {
+        height: 28px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+
+
+    /* Phone */
+
+    .phone-input {
+        gap: 5px;
+    }
+
+    .phone-input select {
+        width: 58px;
+    }
+
+
+    /* Password */
+
+    .password-input input {
+        padding-right: 30px;
+    }
+
+    .eye-button {
+        font-size: 10px;
+        right: 7px;
+    }
+
+
+    /* Requirements */
+
+    .requirements-box {
+        border: none;
+        padding: 0;
+        margin-top: 3px;
+    }
+
+    .requirements-box h3 {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .requirement {
+        gap: 6px;
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+
+    .requirement i {
+        font-size: 9px;
+    }
+
+
+    /* Terms */
+
+    .terms {
+        margin-top: 8px;
+        font-size: 7.5px;
+        line-height: 1.35;
+        gap: 5px;
+    }
+
+    .terms input {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /* Button */
+
+    .create-account {
+        height: 31px;
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+
+    /* Login */
+
+    .login-text {
+        margin-top: 9px;
+        font-size: 8px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        display: none;
+    }
+}
+
+/* =========================
+   EMAIL OTP SCREEN
+========================= */
+
+.otp-screen {
+    display: none;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* OTP HEADER */
+
+.otp-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.otp-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.otp-header .brand span {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* OTP PROGRESS */
+
+.otp-progress {
+    margin-bottom: 45px;
+}
+
+
+/* EMAIL ICON */
+
+.otp-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    background: #eaf0ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otp-icon i {
+    font-size: 28px;
+    color: #2440dc;
+}
+
+
+/* OTP TITLE */
+
+.otp-title h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.otp-title p {
+    margin: 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.otp-title strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #374151;
+}
+
+
+/* OTP INPUTS */
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.otp-input {
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid #d6dce8;
+    border-radius: 6px;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.otp-input:focus {
+    border-color: #2440dc;
+    box-shadow: 0 0 0 2px rgba(36, 64, 220, 0.1);
+}
+
+
+/* OTP MESSAGE */
+
+#otpMessage {
+    min-height: 20px;
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* EXPIRY */
+
+.otp-expiry {
+    margin: 12px 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.otp-expiry strong {
+    color: #2440dc;
+}
+
+
+/* RESEND */
+
+.resend-text {
+    margin: 12px 0;
+    font-size: 13px;
+    color: #2440dc;
+    font-weight: 600;
+}
+
+.resend-text strong {
+    color: #2440dc;
+}
+
+/* RESEND NEW CODE BUTTON */
+
+.resend-button {
+    display: inline-block;
+    width: 180px;
+    height: 27px;
+    line-height: 27px;
+    background: #2440dc;
+    color: #ffffff !important;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* DIDN'T RECEIVE */
+
+.didnt-receive {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* OTP FOOTER */
+
+/*.otp-screen footer {
+    margin-top: 55px;
+    font-size: 11px;
+    color: #9ca3af;
+}*/
+
+
+/* =========================
+   MOBILE OTP SCREEN
+========================= */
+
+@media (max-width: 600px) {
+
+    .otp-screen {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .otp-header .brand {
+        display: none;
+    }
+
+    .otp-progress {
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+
+    .otp-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .otp-icon i {
+        font-size: 24px;
+    }
+
+    .otp-title h1 {
+        font-size: 18px;
+    }
+
+    .otp-title p,
+    .otp-title strong {
+        font-size: 11px;
+    }
+
+    .otp-inputs {
+        gap: 7px;
+    }
+
+    .otp-input {
+        width: 40px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .otp-screen footer {
+        margin-top: 45px;
+    }
+}
+
+/* =========================
+   OTP CARD LAYOUT
+========================= */
+
+/*.registration-card.otp-active {
+    width: 100%;
+    max-width: 720px;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 35px 55px 25px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-card.otp-active .otp-screen {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    flex: 1;
+}*/
+
+
+/* OTP HEADER */
+
+.registration-card.otp-active .otp-header {
+    margin-bottom: 20px;
+}
+
+
+/* OTP PROGRESS */
+
+.registration-card.otp-active .otp-progress {
+    width: 90%;
+    margin: 10px auto 45px;
+}
+
+
+/* OTP CONTENT */
+
+.registration-card.otp-active .otp-icon {
+    margin-top: 5px;
+}
+
+
+/* OTP FOOTER */
+
+/*.registration-card.otp-active .otp-screen footer {
+    margin-top: auto;
+    padding-top: 40px;
+}*/
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .registration-card.otp-active {
+        max-width: 100%;
+        min-height: 100vh;
+        padding: 20px 18px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .registration-card.otp-active .otp-header {
+        justify-content: flex-start;
+    }
+
+    .registration-card.otp-active .otp-progress {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+
+    .registration-card.otp-active .otp-screen footer {
+        padding-top: 30px;
+    }
+
+}
+
+/* =========================
+   WRONG OTP STATE
+========================= */
+
+.otp-error-message {
+    background: transparent;
+    color: #e53935;
+    font-size: 11px;
+    font-weight: 600;
+
+    width: auto;
+    max-width: none;
+
+    margin: 8px auto 15px;
+    padding: 0;
+
+    border-radius: 0;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.otp-error-message span {
+    font-size: 10px;
+}
+
+.otp-input.otp-error {
+    border-color: #ef5350;
+    color: #e53935;
+    box-shadow: none;
+}
+
+/* Wrong OTP - red email icon */
+
+.otp-icon.otp-error-icon {
+    background: #ffe8e8;
+}
+
+.otp-icon.otp-error-icon i {
+    color: #e53935;
+}
+
+#resendTimer {
+    cursor: default;
+}
+
+#resendTimer:empty {
+    cursor: default;
+}
+
+.otp-expired-message {
+    background: transparent;
+    color: #e53935;
+    font-size: 11px;
+    font-weight: 600;
+
+    width: 100%;
+    max-width: 360px;
+
+    margin: 8px auto 15px;
+    padding: 9px 12px;
+
+    border-radius: 5px;
+    line-height: 1.5;
+
+    text-align: center;
+     box-sizing: border-box;
+}
+
+.otp-icon.otp-expired-icon {
+    background: #ffe8e8;
+}
+
+.otp-icon.otp-expired-icon i {
+    color: #e53935;
+}
+
+.otp-input.otp-expired {
+    border-color: #ef5350;
+    color: #e53935;
+}
+
+/*----------------------------
+     SMS - OTP - INPUT
+-----------------------------*/
+
+.sms-otp-input {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #d6dce8;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.sms-otp-input:focus {
+    border-color: #2440dc;
+    box-shadow: 0 0 0 2px rgba(36, 64, 220, 0.08);
+}
+
+@media (max-width: 600px) {
+    .sms-otp-input {
+        width: 40px;
+        height: 44px;
+    }
+}
+
+.sms-otp-icon {
+    background: #e5f7ed;
+}
+
+.sms-otp-icon i {
+    color: #35b87b;
+}
+
+.sms-phone-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* SMS OTP - compact boxes */
+.sms-otp-input {
+    width: 34px;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#smsOtpScreen .otp-inputs {
+    gap: 8px;
+    margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .sms-otp-input {
+        width: 30px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+     .sms-otp-icon {
+        transform: translateY(-19px);
+    }
+
+    #smsOtpScreen .otp-inputs {
+        gap: 6px;
+    }
+}
+
+/* Compact progress bar for SMS OTP */
+#smsOtpScreen .otp-progress {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#smsOtpScreen .didnt-receive a {
+    color: #2440dc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#smsOtpScreen footer {
+     display: block;
+    text-align: center;
+    margin-top: 28px;
+    padding-top: 0;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.otp-max-attempt-message {
+    background: #ffe8e8;
+    color: #e53935;
+    font-size: 11px;
+    font-weight: 600;
+
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+
+    margin: 8px auto 15px !important;
+    padding: 9px 12px;
+
+    border-radius: 5px;
+    line-height: 1.5;
+
+    text-align: center;
+
+}
+
+.otp-input.otp-expired {
+    border-color: #ef5350;
+    color: #e53935;
+    box-shadow: none;
+}
+
+/* ==============================
+   MFA COMPLETE SCREEN
+================================ */
+
+.mfa-complete-card {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 45px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.mfa-complete-icon {
+    margin-bottom: 18px;
+}
+
+.mfa-complete-circle {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #e1f7ea;
+    color: #20b96b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.mfa-complete-card h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.mfa-complete-message {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.mfa-complete-submessage {
+    max-width: 430px;
+    margin: 0 auto 25px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+.mfa-complete-card .primary-button {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.mfa-complete-copyright {
+    margin: 25px 0 0;
+    font-size: 10px;
+    color: #9ca3af;
+}
+
+/* ==============================
+   MFA COMPLETE - FINAL LAYOUT
+================================ */
+
+.mfa-complete-card {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 45px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.mfa-complete-card .primary-button {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: 32px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background: #2440dc;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mfa-complete-card .primary-button:hover {
+    background: #1d35c5;
+}
+
+/* ==============================
+   MFA PAGE CENTERING
+================================ */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mfa-complete-card {
+    margin: 0 auto;
+}
+
+/* ==============================
+   REGISTRATION SUCCESS SCREEN
+================================ */
+
+.registration-success-card {
+    width: 100%;
+    max-width: 560px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 45px 50px 40px;
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+.verification-list {
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto 30px;
+    text-align: left;
+}
+
+.verification-list p {
+    margin: 12px 0;
+    font-size: 15px;
+    color: #374151;
+}
+
+.verification-list span {
+    display: inline-block;
+    width: 28px;
+    color: #20b96b;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.success-icon {
+    margin-bottom: 18px;
+}
+
+.success-circle {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #e1f7ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    position: relative;
+}
+
+.success-circle::before {
+    content: "✓";
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #20b96b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.registration-success-card h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.success-message {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.success-submessage {
+    max-width: 430px;
+    margin: 0 auto 25px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+.registration-success-card .primary-button {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: 32px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background: #2440dc;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.registration-success-card .primary-button:hover {
+    background: #1d35c5;
+}
+
+.success-copyright {
+    margin: 25px 0 0;
+    font-size: 10px;
+    color: #9ca3af;
+}
+
+@media (max-width: 700px) {
+
+    .registration-success-card {
+        width: calc(100% - 20px);
+        max-width: 360px;
+        min-height: auto;
+        box-sizing: border-box;
+        margin: 10px auto;
+        padding: 35px 25px 30px;
+        background: #ffffff;
+        border: 2px solid #555555;
+        border-radius: 28px;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .registration-success-card .success-icon {
+        margin-bottom: 18px;
+    }
+
+    .registration-success-card .success-circle {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #e1f7ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    position: relative;
+}
+
+.registration-success-card .success-circle::before {
+    content: "✓";
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #20b96b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+    .registration-success-card h2 {
+        margin: 0 0 12px;
+        font-size: 21px;
+        color: #111827;
+    }
+
+    .registration-success-card .success-message {
+        margin: 0 0 22px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #374151;
+    }
+
+    .verification-list {
+        text-align: left;
+        margin: 0 0 28px;
+    }
+
+    .verification-list p {
+        margin: 12px 0;
+        font-size: 13px;
+        color: #374151;
+    }
+
+    .verification-list span {
+        display: inline-block;
+        width: 25px;
+        color: #20b96b;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .registration-success-card .primary-button {
+        width: 100%;
+        max-width: none;
+        height: 42px;
+        border-radius: 6px;
+        font-size: 13px;
+    }
+
+}
+
+/* Remove outer Registration Success container */
+.registration-success-card {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* =========================
+   SMS OTP WRONG STATE
+========================= */
+
+/* Red phone icon */
+
+.sms-otp-icon.sms-otp-error svg circle {
+    fill: #ffe8e8;
+}
+
+.sms-otp-icon.sms-otp-error svg path {
+    stroke: #e53935;
+}
+
+
+/* Red last OTP box */
+
+.sms-otp-input.sms-otp-error {
+    border-color: #ef5350;
+    color: #e53935;
+    box-shadow: none;
+}
+
+
+/* 1st and 2nd wrong OTP */
+
+#smsOtpMessage {
+    color: #e53935;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    margin: 8px auto 15px;
+}
+
+
+/* Maximum attempts */
+
+.sms-otp-max-attempt-message {
+    background: #ffe8e8;
+    color: #e53935;
+    font-size: 11px;
+    font-weight: 600;
+
+    width: 100%;
+    max-width: 360px;
+
+    margin: 8px auto 15px;
+    padding: 9px 12px;
+
+    border-radius: 5px;
+    line-height: 1.5;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Red background for SMS phone icon */
+
+.sms-otp-icon.sms-otp-error {
+    background: #ffe8e8;
+}
+
+/* =========================
+   COMPACT OTP CONTAINER
+========================= */
+
+/*.registration-card.otp-active {
+    min-height: 0;
+    padding: 20px 40px 15px;
+    height: 620px !important;
+}*/
+
+.registration-card.otp-active .otp-screen footer {
+    margin-top: 20px;
+    padding-top: 0;
+}
+/* Center email OTP expired message */
+
+/* Center OTP status message */
+
+#otpMessage {
+    display: block;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    box-sizing: border-box;
+}
+
+/* =========================
+   COMPACT EMAIL OTP CARD
+========================= */
+
+.registration-card.otp-active {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.registration-card.otp-active .otp-screen {
+    flex: none !important;
+}
+
+.registration-card.otp-active .otp-screen footer {
+    margin-top: 25px !important;
+    padding-top: 0 !important;
+}
+
+/* Smaller Email OTP boxes */
+
+.registration-card.otp-active .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .registration-card.otp-active .otp-input {
+        width: 35px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+/* =========================
+   EMAIL OTP - MATCH SMS DESIGN
+========================= */
+
+#emailOtpScreen {
+    text-align: center;
+}
+
+#emailOtpScreen .otp-icon {
+    margin-top: 5px;
+    margin-bottom: 22px;
+}
+
+#emailOtpScreen .otp-progress {
+    width: 90%;
+    margin: 10px auto 45px;
+}
+
+#emailOtpScreen .otp-inputs {
+    margin: 25px 0;
+}
+
+#emailOtpScreen .didnt-receive {
+    margin-top: 25px;
+}
+
+#emailOtpScreen footer {
+    display: block;
+    text-align: center;
+    margin-top: 28px !important;
+    padding-top: 0 !important;
+    font-size: 11px;
+    color: #9ca3af;
+}
