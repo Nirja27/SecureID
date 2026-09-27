@@ -1,4 +1,5 @@
 const passwordInput = document.getElementById("password");
+const API_BASE_URL = "https://secureid-production.up.railway.app";
 
 const lengthRequirement = document.getElementById("lengthRequirement");
 const uppercaseRequirement = document.getElementById("uppercaseRequirement");
@@ -127,7 +128,7 @@ message.style.color = "#2440dc";
 
 try {
 
-    const response = await fetch("http://localhost:5000/api/register", {
+    const response = await fetch(`${API_BASE_URL}/api/register`, {
         method: "POST",
 
         headers: {
@@ -265,7 +266,7 @@ async function verifyEmailOTP(otp) {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/verify-email-otp",
+            `${API_BASE_URL}/api/verify-email-otp`,
             {
                 method: "POST",
 
@@ -716,7 +717,7 @@ resendTimer.addEventListener("click", async () => {
         resendTimer.textContent = "Sending...";
 
         const response = await fetch(
-            "http://localhost:5000/api/resend-email-otp",
+            `${API_BASE_URL}/api/resend-email-otp`,
             {
                 method: "POST",
                 headers: {
@@ -912,7 +913,7 @@ async function sendSmsOTP() {
         console.log("Sending SMS OTP...");
 
         const response = await fetch(
-            "http://localhost:5000/api/send-sms-otp",
+            `${API_BASE_URL}/api/send-sms-otp`,
             {
                 method: "POST",
 
@@ -1054,7 +1055,7 @@ async function verifySmsOTP() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/verify-sms-otp",
+            `${API_BASE_URL}/api/verify-sms-otp`,
             {
                 method: "POST",
                 headers: {
